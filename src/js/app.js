@@ -56,8 +56,8 @@ App = {
 
     // Load contract data
     App.contracts.Election.deployed().then(function(instance) {
-      electionInstance = instance;
-      return electionInstance.candidatesCount();
+      electionInstance = instance
+      return electionInstance.candidatesCount()
     }).then(function(candidatesCount) {
       var candidatesResults = $("#candidatesResults")
       candidatesResults.empty()
@@ -92,15 +92,15 @@ App = {
   },
 
   castVote: function() {
-    var cadidateId = $('#candidatesSelect').val()
+    var candidateId = $('#candidatesSelect').val();
     App.contracts.Election.deployed().then(function(instance) {
-      return instance.vote(candidateId, {from: Ap.account})
+      return instance.vote(candidateId, {from: App.account })
     }).then(function(result) {
       $("#content").hide()
       $("#loader").show()
-    }).catch(function(error) {
-      console.error(error)
-    }) 
+    }).catch(function(err) {
+      console.error(err)
+    });
   }
 
 }
