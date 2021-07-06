@@ -1,7 +1,7 @@
 {
-  "name": "pet-shop",
+  "name": "decentralized-elections",
   "version": "1.0.0",
-  "description": "",
+  "description": "decentralized elections",
   "main": "truffle.js",
   "directories": {
     "test": "test"
@@ -10,7 +10,7 @@
     "dev": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "adrian",
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.3.0"
